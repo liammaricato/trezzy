@@ -30,6 +30,9 @@ gem "tailwindcss-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+# Adds model attributes/routes to top of model files/routes file
+gem 'annotate', group: :development
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
