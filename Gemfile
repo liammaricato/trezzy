@@ -31,7 +31,9 @@ gem "tailwindcss-rails"
 gem "jbuilder"
 
 # Adds model attributes/routes to top of model files/routes file
-gem 'annotate', group: :development
+gem "annotate", group: :development
+
+gem "devise"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
