@@ -10,6 +10,7 @@ class RegistrationMailer < ApplicationMailer
     @guest_name = registration_code.first_name
     @inviter_name = registration_code.user.first_name
     @inviter_role = "tesoureiro".titleize
+    @registration_link = registration_code.registration_link
 
     mail to: registration_code.email
   end

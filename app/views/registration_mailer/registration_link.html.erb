@@ -3,6 +3,6 @@
 <h2>Seja bem-vindo ao Trezzy, <%= @guest_name %>!</h2>
 <p>Você foi convidado a se registrar pelo <%= @inviter_name %>, <%= @inviter_role %> do seu Capítulo. Para se registrar, clique no botão abaixo:</p>
 
-<a href="">Registrar</a>
+<%= link_to "Registrar", @registration_link %>
 
 <p>Mas lembre-se que este link expira em uma semana, então não deixe de se cadastrar!</p>

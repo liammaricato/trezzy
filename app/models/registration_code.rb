@@ -33,6 +33,6 @@ class RegistrationCode < ApplicationRecord
   end
 
   def registration_link
-    "http://localhost:3000/registration" #MUDAR ESSA JOÇA DPS
+    "http://localhost:3000/registration/#{self.code}" #TODO: put this in an env
   end
 end
