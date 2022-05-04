@@ -21,9 +21,11 @@
                 <img class="hidden lg:block h-8 w-auto" src="<%= image_url 'logo.png' %>" alt="Workflow">
               </div>
             </div>
-            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              LOGOUT
-            </div>
+            <% if user_signed_in? %>
+              <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                <%= button_to "Sign Out", destroy_user_session_path, method: :delete %>
+              </div>
+            <% end %>
           </div>
         </div>
       </nav>
