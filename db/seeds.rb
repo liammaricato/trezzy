@@ -31,20 +31,20 @@ Cashflow.create([
   }
 ])
 
-# User.create([
-#   {
-#     id: 1,
-#     chapter_id: 1,
-#     name: "Liam",
-#     password: "123",
-#     user_type: "admin"
-#   },
-#   {
-#     id: 2,
-#     chapter_id: 2,
-#     name: "Matheus Torres",
-#     password: "123",
-#     user_type: "treasurer"
-#   }
-# ])
+User.create([
+  {
+    id: 1,
+    chapter_id: 1,
+    name: "Liam",
+    email: "liam@trezzy.com",
+    password: "123456789"
+  },
+  {
+    id: 2,
+    chapter_id: 2,
+    name: "Matheus Torres",
+    email: "torres@trezzy.com",
+    password: "123456789"
+  }
+])
 

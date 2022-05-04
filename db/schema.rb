@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_03_131424) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_04_132745) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -49,6 +49,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_03_131424) do
     t.string "first_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_registration_codes_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -72,5 +74,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_03_131424) do
   add_foreign_key "cashflows", "chapters"
   add_foreign_key "entries", "cashflows"
   add_foreign_key "entries", "users"
+  add_foreign_key "registration_codes", "users"
   add_foreign_key "users", "chapters"
 end

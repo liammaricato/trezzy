@@ -33,4 +33,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   belongs_to :chapter
   has_many :entries
+  has_many :registration_codes
+
+  def first_name
+    self.name.split.first
+  end
 end
